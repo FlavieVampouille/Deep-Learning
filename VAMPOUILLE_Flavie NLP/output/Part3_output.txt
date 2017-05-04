@@ -1,0 +1,111 @@
+--------  Question 1  --------
+
+10:05:17 INFO:collecting all words and their counts
+10:05:17 INFO:PROGRESS: at sentence #0, processed 0 words, keeping 0 word types
+10:05:22 INFO:collected 253854 word types from a corpus of 17005207 raw words and 1701 sentences
+10:05:22 INFO:Loading a fresh vocabulary
+10:05:22 INFO:min_count=5 retains 71290 unique words (28% of original 253854, drops 182564)
+10:05:22 INFO:min_count=5 leaves 16718844 word corpus (98% of original 17005207, drops 286363)
+10:05:22 INFO:deleting the raw counts dictionary of 253854 items
+10:05:23 INFO:sample=0.001 downsamples 38 most-common words
+10:05:23 INFO:downsampling leaves estimated 12506280 word corpus (74.8% of prior 16718844)
+10:05:23 INFO:estimated required memory for 71290 words and 200 dimensions: 149709000 bytes
+10:05:23 INFO:resetting layer weights
+10:05:24 INFO:training model with 3 workers on 71290 vocabulary and 200 features, using sg=0 hs=0 sample=0.001 negative=5 window=5
+10:05:24 INFO:expecting 1701 sentences, matching count from corpus used for vocabulary survey
+
+
+--------  Question 2  --------
+
+Q2.1
+
+Printing word similarity between "apple" and "mac" : 0.567861632452
+Printing word similarity between "apple" and "peach" : 0.178399832237
+Printing word similarity between "banana" and "peach" : 0.688715470006
+
+
+Q2.2
+
+Printing closest word to "difficult" with model : [(u'easy', 0.7628731727600098), (u'impossible', 0.7308117151260376), (u'easier', 0.7208834886550903), (u'helpful', 0.7206708192825317), (u'useful', 0.693812370300293), (u'necessary', 0.6925407648086548), (u'easiest', 0.6852809190750122), (u'harder', 0.6695212125778198), (u'convenient', 0.6659351587295532), (u'possible', 0.656254768371582)]
+
+Printing closest word to "difficult" with model_word : [(u'very_difficult', 0.870441734790802), (u'impossible', 0.8491416573524475), (u'easier', 0.8173036575317383), (u'more_difficult', 0.8103768825531006), (u'easy', 0.7883470058441162), (u'necessary', 0.7589850425720215), (u'hard', 0.7526690363883972), (u'possible', 0.7507368326187134), (u'helpful', 0.7459725141525269), (u'very_easy', 0.7409809827804565)]
+
+Printing closest word to "clinton" with model_word : [(u'bush', 0.8667015433311462), (u'reagan', 0.859365701675415), (u'gore', 0.8575333952903748), (u'bill_clinton', 0.8540793061256409), (u'w_bush', 0.8396294116973877), (u'roosevelt', 0.8302063941955566), (u'rumsfeld', 0.8187249898910522), (u'kennedy', 0.812834620475769), (u'al_gore', 0.8085633516311646), (u'eisenhower', 0.7998623847961426)]
+
+
+Q2.3
+
+Printing closest word to vector "vect(france) -vect(germany) +vect(berlin)" : [(u'paris', 0.757699728012085), (u'venice', 0.6330796480178833), (u'commune', 0.6261051893234253), (u'amsterdam', 0.6218461990356445), (u'seville', 0.6184689998626709), (u'brussels', 0.6111290454864502), (u'munich', 0.5968526005744934), (u'montparnasse', 0.5951699018478394), (u'vienna', 0.5926096439361572), (u'milan', 0.5887279510498047)]
+
+
+Q2.4
+
+Printing closest word to vector "vect(image) +vect(nasa)" : [(u'landsat', 0.6949625015258789), (u'photo', 0.6519671678543091), (u'satellite', 0.6498790383338928), (u'gif', 0.6453948020935059), (u'voyager', 0.6433961391448975), (u'iss', 0.6350091099739075), (u'hipparcos', 0.6095403432846069), (u'gemini', 0.5949836373329163), (u'probe', 0.5939955711364746), (u'sputnik', 0.5928162336349487)]
+
+Printing closest word to vector "vect(sky) +vect(animal)" : [(u'bird', 0.6866010427474976), (u'eye', 0.6548259854316711), (u'giant', 0.6414498090744019), (u'creatures', 0.6376204490661621), (u'flesh', 0.6349047422409058), (u'creature', 0.6340506076812744), (u'herd', 0.6276106238365173), (u'skin', 0.6267515420913696), (u'cave', 0.6246962547302246), (u'eyes', 0.6153009533882141)]
+
+Printing closest word to vector "vect(sky) +vect(animal) -vect(insect)" : [(u'heavens', 0.6082836985588074), (u'heaven', 0.5848971605300903), (u'planet', 0.5502161979675293), (u'sun', 0.5309476256370544), (u'dead', 0.5248340964317322), (u'moon', 0.5165950059890747), (u'darkness', 0.5084065794944763), (u'shining', 0.5083727836608887), (u'eyes', 0.5076791048049927), (u'night', 0.49447113275527954)]
+
+
+--------  Question 3  --------
+
+Q3.1
+
+The query :
+a girl trying to get fit for a bodybuilding competition .
+is most similar to
+gymnasts get ready for a competition .
+with a score of : 0.902949750423
+
+
+Q3.2
+
+The query :
+a girl trying to get fit for a bodybuilding competition .
+is most similar to
+
+gymnasts get ready for a competition
+with a score of : 0.902949750423
+
+a woman is getting ready to perform a song for the audience .
+with a score of : 0.89009732008
+
+a runner in a competition want to go to the finish line .
+with a score of : 0.855536520481
+
+men working to build a fence for customers .
+with a score of : 0.851471602917
+
+a man prepares to give a speech for a television audience .
+with a score of : 0.84947603941
+
+
+--------  Question 4  --------
+
+Q4.1
+
+IDF score of the word "the" : 1.56090953218
+IDF score of the word "a" : 1.16641345544
+
+Q4.2
+
+Generated embeddings for 9823 sentences from data/snli.test dataset.
+
+The query :
+a girl trying to get fit for a bodybuilding competition .
+is most similar to
+
+gymnasts get ready for a competition .
+with a score of : 0.898546099663
+
+a woman is getting ready to perform a song for the audience .
+with a score of : 0.816802978516
+
+a runner in a competition want to go to the finish line .
+with a score of : 0.804300546646
+
+the men are trying to fix a car .
+with a score of : 0.789531469345
+
+a dog is going to get wet .
+with a score of : 0.786528289318
